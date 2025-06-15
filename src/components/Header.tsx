@@ -8,7 +8,7 @@ const Header = () => {
   const { user, logout } = useAuth();
 
   return (
-    <header className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
+    <header className="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg flex items-center justify-center">

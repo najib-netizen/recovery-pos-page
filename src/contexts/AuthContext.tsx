@@ -45,7 +45,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       await new Promise(resolve => setTimeout(resolve, 1000));
       
       if (email === 'admin@pos.rw' && password === 'admin123') {
-        const user = { id: '1', name: 'Fiacre Admin', email };
+        const user = { id: '1', name: 'Admin User', email };
         setUser(user);
         localStorage.setItem('currentUser', JSON.stringify(user));
         setIsLoading(false);
