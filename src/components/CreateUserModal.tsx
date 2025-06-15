@@ -68,10 +68,10 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
           </DialogDescription>
         </DialogHeader>
         
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="name" className="text-white">Full Name</Label>
+            <div className="space-y-1">
+              <Label htmlFor="name" className="text-white text-sm">Full Name</Label>
               <Input
                 id="name"
                 value={formData.name}
@@ -82,10 +82,10 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
               />
             </div>
             
-            <div className="space-y-2">
-              <Label htmlFor="country" className="text-white">Country</Label>
+            <div className="space-y-1">
+              <Label htmlFor="country" className="text-white text-sm">Country</Label>
               <Select value={formData.country} onValueChange={(value) => handleInputChange('country', value)}>
-                <SelectTrigger className="bg-slate-700/50 border-white/10 text-white">
+                <SelectTrigger className="bg-slate-700/50 border-white/10 text-white h-8">
                   <SelectValue placeholder="Select country" />
                 </SelectTrigger>
                 <SelectContent className="bg-slate-800 border-white/20">
@@ -101,8 +101,8 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-white">Email Address</Label>
+            <div className="space-y-1">
+              <Label htmlFor="email" className="text-white text-sm">Email Address</Label>
               <Input
                 id="email"
                 type="email"
@@ -114,8 +114,8 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
               />
             </div>
             
-            <div className="space-y-2">
-              <Label htmlFor="phoneNumber" className="text-white">Phone Number</Label>
+            <div className="space-y-1">
+              <Label htmlFor="phoneNumber" className="text-white text-sm">Phone Number</Label>
               <Input
                 id="phoneNumber"
                 value={formData.phoneNumber}
@@ -128,8 +128,8 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="amount" className="text-white">Amount (RWF)</Label>
+            <div className="space-y-1">
+              <Label htmlFor="amount" className="text-white text-sm">Amount (RWF)</Label>
               <Input
                 id="amount"
                 type="number"
@@ -141,8 +141,8 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
               />
             </div>
             
-            <div className="space-y-2">
-              <Label htmlFor="periodStart" className="text-white">Period Start</Label>
+            <div className="space-y-1">
+              <Label htmlFor="periodStart" className="text-white text-sm">Period Start</Label>
               <Input
                 id="periodStart"
                 type="date"
@@ -153,8 +153,8 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
               />
             </div>
             
-            <div className="space-y-2">
-              <Label htmlFor="periodEnd" className="text-white">Period End</Label>
+            <div className="space-y-1">
+              <Label htmlFor="periodEnd" className="text-white text-sm">Period End</Label>
               <Input
                 id="periodEnd"
                 type="date"
@@ -166,10 +166,10 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
             </div>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="status" className="text-white">Status</Label>
+          <div className="space-y-1">
+            <Label htmlFor="status" className="text-white text-sm">Status</Label>
             <Select value={formData.status} onValueChange={(value: 'active' | 'inactive') => handleInputChange('status', value)}>
-              <SelectTrigger className="bg-slate-700/50 border-white/10 text-white">
+              <SelectTrigger className="bg-slate-700/50 border-white/10 text-white h-8">
                 <SelectValue placeholder="Select status" />
               </SelectTrigger>
               <SelectContent className="bg-slate-800 border-white/20">
@@ -179,20 +179,20 @@ const CreateUserModal: React.FC<CreateUserModalProps> = ({ isOpen, onClose, onSu
             </Select>
           </div>
 
-          <div className="flex justify-end space-x-3 pt-6">
+          <div className="flex justify-end space-x-3 pt-4">
             <Button
               type="button"
               variant="outline"
               onClick={onClose}
-              className="border-white/20 text-white hover:bg-white/10"
+              className="border-white/60 text-black hover:bg-white/10 h-8"
             >
               Cancel
             </Button>
             <Button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 text-white"
+              className="bg-blue-600 hover:bg-blue-700 text-white h-8"
             >
-              Create Customer
+              Create
             </Button>
           </div>
         </form>

@@ -77,10 +77,10 @@ const LoginPage = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3">
             {!isLogin && (
-              <div className="space-y-2">
-                <Label htmlFor="name" className="text-white">Full Name</Label>
+              <div className="space-y-1">
+                <Label htmlFor="name" className="text-white text-sm">Full Name</Label>
                 <Input
                   id="name"
                   name="name"
@@ -94,8 +94,8 @@ const LoginPage = () => {
               </div>
             )}
             
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-white">Email</Label>
+            <div className="space-y-1">
+              <Label htmlFor="email" className="text-white text-sm">Email</Label>
               <Input
                 id="email"
                 name="email"
@@ -108,8 +108,8 @@ const LoginPage = () => {
               />
             </div>
             
-            <div className="space-y-2">
-              <Label htmlFor="password" className="text-white">Password</Label>
+            <div className="space-y-1">
+              <Label htmlFor="password" className="text-white text-sm">Password</Label>
               <Input
                 id="password"
                 name="password"
@@ -123,8 +123,8 @@ const LoginPage = () => {
             </div>
             
             {!isLogin && (
-              <div className="space-y-2">
-                <Label htmlFor="confirmPassword" className="text-white">Confirm Password</Label>
+              <div className="space-y-1">
+                <Label htmlFor="confirmPassword" className="text-white text-sm">Confirm Password</Label>
                 <Input
                   id="confirmPassword"
                   name="confirmPassword"
@@ -140,25 +140,25 @@ const LoginPage = () => {
             
             <Button 
               type="submit" 
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-200"
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-colors duration-200 h-9 mt-4"
               disabled={isLoading}
             >
               {isLoading ? 'Please wait...' : (isLogin ? 'Sign In' : 'Create Account')}
             </Button>
           </form>
           
-          <div className="mt-6 text-center">
+          <div className="mt-4 text-center">
             <button
               type="button"
               onClick={() => setIsLogin(!isLogin)}
-              className="text-blue-400 hover:text-blue-300 transition-colors duration-200"
+              className="text-blue-400 hover:text-blue-300 transition-colors duration-200 text-sm"
             >
               {isLogin ? "Don't have an account? Sign up" : "Already have an account? Sign in"}
             </button>
           </div>
           
           {isLogin && (
-            <div className="mt-4 p-3 bg-blue-900/30 rounded-lg border border-blue-500/30">
+            <div className="mt-3 p-2 bg-blue-900/30 rounded-lg border border-blue-500/30">
               <p className="text-xs text-blue-300 text-center">
                 Demo credentials: admin@pos.rw / admin123
               </p>

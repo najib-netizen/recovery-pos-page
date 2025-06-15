@@ -33,7 +33,7 @@ const Header = () => {
           <Button 
             onClick={logout}
             variant="outline"
-            className="border-white/20 text-white hover:bg-white/10"
+            className="border-white/100 text-black hover:bg-white/30"
           >
             Logout
           </Button>

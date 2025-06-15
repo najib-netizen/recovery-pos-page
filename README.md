@@ -13,7 +13,7 @@ Follow these steps:
 git clone https://github.com/najib-netizen/recovery-pos-page
 
 # Step 2: Navigate to the project directory.
-cd dashboardchallenge
+cd dashbrecovery-pos-page
 
 # Step 3: Install the necessary dependencies.
 npm i
